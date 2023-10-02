@@ -32,7 +32,7 @@ const eliminarConferencista = async (req,res)=>{
     if( !mongoose.Types.ObjectId.isValid(id) ) return res.status(404).json({msg:`Lo sentimos, no existe el Conferencista ${id}`})
 
     await Conferencista.findByIdAndRemove(id)
-    res.status(200).json({ msg: 'Cliente eliminado con éxito' });
+    res.status(200).json({ msg: 'Conferencista eliminado con éxito' });
 }
 
 export{
