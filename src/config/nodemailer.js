@@ -19,7 +19,7 @@ const sendMailToUser = async(userMail,token)=>{
     to: userMail,
     subject: "Verifica tu cuenta de correo electrónico",
     html: `
-    <h1>Sistema de gestión (VET-ESFOT 🐶 😺)</h1>
+    <h1>Sistema de gestión (CONFERENCIAS 🧑‍💻)</h1>
     <hr>
     <a href="http://localhost:3000/api/confirmar/${token}">Clic para confirmar tu cuenta</a>
     <hr>

@@ -2,7 +2,7 @@
 import Usuario from "../models/Usuario.js"
 import {sendMailToUser} from "../config/nodemailer.js"
 import generarJWT from "../helpers/crearJWT.js"
-import mongoose from "mongoose";
+//import mongoose from "mongoose";
 
 const login = async(req,res)=>{
     // Capturar los datos del requests
@@ -77,15 +77,6 @@ const confirmEmail = async (req,res)=>{
     res.status(200).json({msg:"Token confirmado, ya puedes iniciar sesión"}) 
 }
 
-/*
-const listarVentas = (req,res)=>{
-    res.status(200).json({res:'lista de veterinarios registrados'})
-}
-
-const listarStock = (req,res)=>{
-    res.status(200).json({res:'lista de veterinarios registrados'})
-}
-*/
 export {
     login,
     registrar,

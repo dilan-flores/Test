@@ -34,5 +34,4 @@ router.get("/confirmar/:token", confirmEmail);
 
 // router.put('/veterinario/:id',(req,res)=>res.send("actualizar perfil"))
 
-
 export default router

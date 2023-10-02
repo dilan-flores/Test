@@ -3,9 +3,9 @@ import dotenv from 'dotenv'
 // Intercambio de recursos de origen cruzado
 import cors from 'cors'; // Mecanismo de seguridad 
 import routerUsuario from './routers/usuario_routes.js'
-import routerCliente from './routers/cliente_routes.js'
-import routerStock from './routers/stock_routes.js'
-import routerFactura from './routers/factura_routes.js'
+import routerConferencista from './routers/conferencista_routes.js'
+import routerAuditorio from './routers/auditorio_routes.js'
+import routerReserva from './routers/reserva_routes.js'
 
 // Inicializaciones
 const app = express()
@@ -22,9 +22,9 @@ app.use(express.json())
 
 // Rutas
 app.use('/api',routerUsuario)
-app.use('/api',routerCliente)
-app.use('/api',routerStock)
-app.use('/api',routerFactura)
+app.use('/api',routerConferencista)
+app.use('/api',routerAuditorio)
+app.use('/api',routerReserva)
 // Manejo de una ruta que no sea encontrada
 app.use((req,res)=>res.status(404).send("Endpoint no encontrado - 404"))
 

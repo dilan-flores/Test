@@ -1,32 +1,31 @@
 import mongoose, {Schema,model} from 'mongoose'
 
-const cabeceraSchema = new Schema({
+const reservaSchema = new Schema({
     // Numero_factura:{
     //     type:String,
     //     require:true,
     //     trim:true
     // },
-    Fecha_factura:{
-        type:Date,
+    Codigo_res:{
+        type:String,
         require:true,
         trim:true,
-        default:Date.now()
     },
-    Total_factura:{
-        type:Number,
+    Descripcion_res:{
+        type:String,
         require:true,
         trim:true
     },
-    Cliente:{
+    Conferencista:{
         type:mongoose.Schema.Types.ObjectId,
-        ref:'Cliente'
-    },// por el momento será así la parte de producto
-    Stock:{
+        ref:'Conferencista'
+    },
+    Auditorio:{
         type:mongoose.Schema.Types.ObjectId,
-        ref:'Stock'
+        ref:'Auditorio'
     },
 },{
     timestamps:true
 })
 
-export default model('Cabecera',cabeceraSchema)
+export default model('Reserva',reservaSchema)
